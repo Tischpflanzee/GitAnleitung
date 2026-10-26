@@ -1,0 +1,154 @@
+\documentclass{article}
+\usepackage[a4paper, margin=2cm]{geometry} 
+\usepackage[T1]{fontenc} %lädt Deutsche schriftzeichen
+\usepackage{lmodern} % Font
+\usepackage{amssymb}%für Mathe
+\usepackage{setspace} %für Zeilen Abstand 
+\usepackage[none]{hyphenat} % Silbentrennung deaktivieren 
+\usepackage{fancyhdr}%Kopf und Fußzeile: https://de.overleaf.com/learn/latex/Headers_and_footers
+\usepackage{graphicx}%Zum Bilder einfügen
+\usepackage{xcolor}
+\usepackage{wrapfig}
+\usepackage[document]{ragged2e}%für Blocksatz
+\usepackage[ddmmyyyy]{datetime}%zum bearbeiten vom Datungs Format
+\usepackage{eurosym}%für \Euro / \euro
+\usepackage{hyperref}
+\usepackage{listings}
+
+
+\newcommand{\authoren}{Niklas Hainz}
+\newcommand{\Thema}{}
+\newcommand{\Fach}{}
+\newcommand{\Zeilenabstand}{1.2}
+\newcommand{\Inhaltsverzeichnisname}{Inhaltsverzeichnis}
+
+
+\newcommand{\absatz}{5mm}
+\newcommand{\Blocksatz}{\justifying}
+\newcommand{\strich}{\vspace{\absatz}\hrule\vspace{\absatz}} 
+
+
+\title{\Thema}
+\author{\authoren}
+\date{\today}
+
+
+\setlength{\parindent}{0cm} %deaktiviert die Automatische Einrückung am Anfang des Dokumentes 
+\renewcommand{\contentsname}{\Inhaltsverzeichnisname}
+\renewcommand{\dateseparator}{.}
+
+
+
+
+
+
+
+\begin{document}
+\begin{spacing}{\Zeilenabstand}
+\maketitle
+\begin{center}
+    \vspace{-5mm}
+    Fach: \Fach
+\end{center}
+\thispagestyle{empty}
+\newpage
+
+\pagestyle{fancy}
+\fancyhead[L]{\authoren}
+\fancyhead[C]{\Thema / Fach: \Fach}
+\fancyhead[R]{\today}
+\fancyfoot[R]{\thepage}
+\fancyfoot[C]{}
+
+\pagenumbering{roman}
+\setcounter{page}{1}
+\tableofcontents
+
+
+\newpage
+
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+
+%%% Document start %%%
+
+
+\section{Git Herunterladen}
+
+Der Git installer oder alternative installations möglichkeiten kann auf der \href{https://git-scm.com/install/windows}{Website} heruntergeladen werden
+
+%\subsection{Windows}
+%
+%\subsubsection{Git Installer}
+%
+%Der Git Installer kann über die \href{https://git-scm.com/install/windows}{Website}
+%heruntergeladen werden und ausgeführt werden.
+%
+%\subsubsection{Winget}
+%
+%Unter Windows kann mit der Shell(Cmd) und dem Programm Winget git insttaliert werden:
+%
+%\noindent 
+%\begin{lstlisting}[language=bash]
+%$ winget install git 
+%\end{lstlisting}
+%
+%
+%\subsection{MacOS}
+%
+%
+%
+%\subsection{Linux}
+
+\section{Git}
+
+\subsection{Git's Nutzen}
+
+Git ist ein Programm zur Versionierung von Datein. Im ideal Fall sind diese Dateien
+Textdateien git kann aber auch zur Versionierung von Binär Dateien genutz werden(Zum beispiel Bilder).
+
+\subsection{Umgang mit Git}
+
+\subsubsection{Git Repos}
+
+Git funktioniert in sogenanten Reporsertories die man sich als git umgebung vorstellen kann.
+
+\vspace{\absatz}
+
+Mit der Cli kann man in einem Ordner den Comand {\color{red} git init} ein Git Reporsertorie erstellen
+Im Hintergrund erstellt Git einen .git ordner in dem Git "lebt". Dieser Ordner ist in vielen 
+Dateie Exploreren Versteckt und muss oftmals extra eingeblendet werden um ihn zu sehen.
+
+\vspace{\absatz}
+
+Diese Git Repo kann dann Beispielsweise über Github oder anderen Platformen online 
+Syncronsiert werden. 
+
+
+\subsubsection{Git Commands}
+
+Git abreitet dann mit verschieden Operatoren.
+
+\vspace{\absatz}
+
+
+
+
+
+
+
+
+
+
+
+
+\subsubsection{Grafisch}
+
+
+
+
+
+
+\end{spacing}
+\end{document}
