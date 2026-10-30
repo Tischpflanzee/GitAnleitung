@@ -37,9 +37,14 @@
 \renewcommand{\contentsname}{\Inhaltsverzeichnisname}
 \renewcommand{\dateseparator}{.}
 
+%For subsubsub... sections
+\setcounter{secnumdepth}{5}
+\setcounter{tocdepth}{5}
 
-
-
+\makeatletter
+\newcommand\subsubsubsection{\@startsection{paragraph}{4}{\z@}{-2.5ex\@plus -1ex \@minus -.25ex}{1.25ex \@plus .25ex}{\normalfont\normalsize\bfseries}}
+\newcommand\subsubsubsubsection{\@startsection{subparagraph}{5}{\z@}{-2.5ex\@plus -1ex \@minus -.25ex}{1.25ex \@plus .25ex}{\normalfont\normalsize\bfseries}}
+\makeatother
 
 
 
@@ -120,17 +125,77 @@ Mit der Cli kann man in einem Ordner den Comand {\color{red} git init} ein Git R
 Im Hintergrund erstellt Git einen .git ordner in dem Git "lebt". Dieser Ordner ist in vielen 
 Dateie Exploreren Versteckt und muss oftmals extra eingeblendet werden um ihn zu sehen.
 
+
 \vspace{\absatz}
+
 
 Diese Git Repo kann dann Beispielsweise über Github oder anderen Platformen online 
 Syncronsiert werden. 
 
+\vspace{\absatz}
+
+Mit einem {\color{red}git clone} Klonnt man das Git repo vom Origin also z.B den stand von Github. Und 
+macht eine Lokale Kopie. Werden dann änderungen auf diesem git repo gemacht sind diese änderungen
+erstmalls lokal. Diese kann man dann mit push/pull/ und add Syncronsiert zum Origin(Github bspw.)
+
+
+
+
+
 
 \subsubsection{Git Commands}
 
-Git abreitet dann mit verschieden Operatoren.
+Git abreitet dann mit verschieden Operatoren:
+
+\subsubsubsection{Clone}
+
+\textbf{Clone:} 
+Clone ist der befehl um ein git repo aus dem Internet zu Klonen. -> Auf das System zu schieben  
+
+
+
+
+\subsubsubsection{Status}
+
+Nach dem änderungen vorgenomen wurden kann man mit {\color{red}git status} diese änderungen einsehen.
+Oder wenn in dem Git repo vom Origin verändert wurde. Also Commits hinter dem Aktuellen stand ist.
+
+\subsubsubsection{Add}
+
+\textbf{Add:}
+Nachdem änderungen gemacht wurden können diese mit {\color{red}git add} zu einem Commit hinzugefügt werden, der 
+syntax von dem Command ist wie folgt:
 
 \vspace{\absatz}
+
+Fügt eine Bestimmte Datei zum Commit hinzu
+
+{\color{red}git add {filename}}
+
+\vspace{\absatz}
+
+Fügt alle geänderten Dateien zum Commit hinzu.
+
+{\color{red}git add --all}
+
+\subsubsubsection{Commit}
+
+Git funktioniert in Commits also um zu den Git repo dazuzutragen muss eine Commit gemacht werden.
+Erst müssen Dateien zu einem Commit mit {\color{red}git add} hinzugefügt werden um danach mit {\color{red} git commit -m ""}
+zu Commiten. Das -m ist für die message/tittel des Commits
+
+
+\subsubsubsection{Push}
+
+Mit {\color{red}git push} kann man alle Commit die man erstellt hat auf den Origin vom Git repo Schieben
+Syntax:
+
+\subsubsubsection{Pull}
+
+Mit Git Pull hollt man sich alle aktuellen Commits vom Origin die noch nicht auf dem Lokalen Git Repo 
+liegen.
+
+
 
 
 
