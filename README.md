@@ -6,7 +6,20 @@ Die Git anleitung ist wenniger eine Anleitung und mehr eine Einleitung zu git un
 
 ## Latex 
 
-Der Latex text wird mit Latexmk und Livetex gebaut
+Der Latex text wird mit Latexmk und Livetex gebaut. Da das paket svg genutz wird. Entsteht die abhänigkeit von Inkscape
+
+Dependecies for nix
+
+```nix
+nix-shell -p texliveFull inkscape
+```
+
+Building Latex:
+
+```bash
+latexmk --shell-escape 
+```
+
 
 ## Mermaid
 
