@@ -15,5 +15,5 @@ Mermaid wird mit Mermaid-cli gebaut:
 [Mermaid-Cli](https://github.com/mermaid-js/mermaid-cli)
 
 ```bash
-mmdc -i gitBranches.mmd -o ../Latex/Bilder/gitBranches.svg
+mmdc -i inputFile.mmd -o outputFile.svg
 ```
